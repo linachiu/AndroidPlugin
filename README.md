@@ -1,4 +1,4 @@
-# AndroidPlugin
+# AndroidPlugin 備忘錄
 
 
 * 開啟 Android 專案
@@ -28,4 +28,4 @@
 
 
 ## 參考資料
-[開發 Unity Android Plugin – 從零開始]https://douduck08.wordpress.com/2016/06/08/birth-of-unity-android-plugin/
+[開發 Unity Android Plugin – 從零開始](https://douduck08.wordpress.com/2016/06/08/birth-of-unity-android-plugin/)
