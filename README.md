@@ -11,6 +11,14 @@
 * 編寫 C# Script
 
 
+## 開啟 Android 專案
+  很一般的開啟新專案
+
+## 匯入 Unity Java classes
+```
+  位置：應用程式/unity/PlaybackEngines/AndroidPlayer/Viariations/{backend}/{buildType}/Classes/classes.jar
+```
+
 
 * findview
 ```
