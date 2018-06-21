@@ -18,7 +18,30 @@
 ```
   位置：應用程式/unity/PlaybackEngines/AndroidPlayer/Viariations/{backend}/{buildType}/Classes/classes.jar
 ```
+* 回到 android studio，在 ($projname) > app > libs 下貼上
+* 在 classes.jar 上按下滑鼠右鍵，選擇 Add As Library...
+ build.gradle 裡會出現 implementation files('libs/classes.jar')
+就可以使用 ```import com.unity3d.player.UnityPlayer;``` 摟～
 
+## 處理 build.gradle
+* 将apply plugin: ‘com.android.application’，改成apply plugin: ‘com.android.library’
+* 删除applicationId
+* 在最後加入
+```
+task deleteOldJar(type: Delete) {
+    delete 'release/mylib.jar'
+}
+
+// 匯出 jar 檔
+task exportJar(type: Copy) {
+    from('build/intermediates/bundles/release/')
+    into('release/')
+    include('classes.jar')
+    // 將匯出的 jar 檔重新命名
+    rename('classes.jar', 'mylib.jar')
+}
+exportJar.dependsOn(deleteOldJar, build)
+```
 
 * findview
 ```
@@ -37,3 +60,5 @@
 
 ## 參考資料
 [開發 Unity Android Plugin – 從零開始](https://douduck08.wordpress.com/2016/06/08/birth-of-unity-android-plugin/)
+[Android Studio 匯出 JAR 檔 - 加入 Unity classes.jar](http://gn02214231.pixnet.net/blog/post/178505239)
+
