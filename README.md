@@ -62,4 +62,5 @@ exportJar.dependsOn(deleteOldJar, build)
 * [開發 Unity Android Plugin – 從零開始](https://douduck08.wordpress.com/2016/06/08/birth-of-unity-android-plugin/)
 * [Android Studio 匯出 JAR 檔 - 加入 Unity classes.jar](http://gn02214231.pixnet.net/blog/post/178505239)
 * [Unity Android Plugin 开发教程](https://rolyyu.github.io/2017/07/28/Unity-Android-Plugin-%E5%BC%80%E5%8F%91%E6%95%99%E7%A8%8B/)
+* [官方教學](https://developer.android.com/studio/projects/android-library#aar-contents)
 
